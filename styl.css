@@ -13,11 +13,15 @@
 }
 
 .purple {
-    color: #007BFF;
+    color: #6C63FF;
 }
 
 h1, h2, h3 {
     color: #333;
+}
+
+button {
+    cursor: pointer;
 }
 
 /* 
@@ -60,6 +64,7 @@ NAVIGATION
     font-weight: 700;
     color: #333;
     display: inline-block;
+    
    
 }
     
@@ -111,18 +116,76 @@ header{
 
 .header__description {
     width: 40%;
+    font-size: 26px;
 }
 
 .header__description--para {
-    padding: 32px 0;
+    padding: 16px 0;
     font-size: 16px
 }
 
 .header__email {
-    max-width: 400px;
+    width: 100%;
     height: 68px;
-    border: 1px solid #ccc;
     position: relative;
     display: flex;
-    gap: 8px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header__email--input {
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 500px;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: border-color 0.3s ease;
+}
+
+.header__email--btn {
+    z-index: 2;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 500px;
+    border: none;
+    margin: 8px;
+    transition: all 0.3s ease;
+}
+
+.header__email--btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.header__customer--title {
+    font-size: 14px;
+    color: #666;
+    margin-top: 58px;
+    margin-bottom: 16px;
+}
+
+.header__cutomers {
+    width: 100%;
+    height: auto;
+}
+
+.header__img--wrapper {
+    width: 60%;
+    justify-content: flex-end;
+   
+}
+
+.header__img {
+    width: 100%;
+    height: auto;  
+    display: flex; 
 }
