@@ -28,6 +28,23 @@ h1, h2, h3 {
     color: #333;
 }
 
+.btn {
+    background-color: #6415ff;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 500px;
+    border: none;
+    margin: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #152cff;
+    transform: translateY(-2px);
+}
+
 button {
     cursor: pointer;    
 }
@@ -341,8 +358,9 @@ QUALITY
     border: 1px solid grey;
     position: relative;
     margin: 0 56px; 
+    display: flex;
     z-index: 2;
-    display: flex;   
+
 }
 
 .quality__img {
@@ -359,8 +377,8 @@ QUALITY
   fill: rgb(100, 21, 255);
   --tw-text-opacity: 1;
   color: rgba(100, 21, 255, var(--tw-text-opacity));
-  z-index: 0;
   display: block;
+  z-index: 0;
 }
 
 /*
@@ -379,7 +397,7 @@ STEPS
 
 .steps__grid {
     position: absolute;  
-    bottom: -100px;
+    
     left: 50%;
     transform: translateX(-50%);
     width: 10rem;
@@ -438,3 +456,80 @@ STEPS
     margin-top: 12px;
     line-height: 2;
 }
+
+/* 
+
+VALUES
+
+*/
+
+.values__description{
+    width: 50%;
+}
+
+.section__tag {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.section__para {
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 24px;
+}
+
+.values__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.value__title {
+    display: flex;
+    align-items: center;
+}
+
+.value__img--wrapper {
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.value__img--wrapper {
+    background-color: #9ae6b4;
+}
+
+.value__img--wrapper {
+    background-color: #feb2b2;
+}
+
+.value__img {
+    width: 18px;
+    height: 18px;
+}
+
+.value__name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 8px
+}
+ .value__para {
+    font-size: 16px;
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    margin-top: 18px;
+    line-height: 1.5;
+    margin-bottom: 36px;
+ }
+ 
+ .values__img {
+    width: 50%;
+ }
+
+
