@@ -16,6 +16,7 @@
     padding: 96px 0
 }
 
+
 img {
     width: 100%;
 }
@@ -315,38 +316,6 @@ QUALITY
     flex-direction: column;
 }
 
-.section__tag {
-    color: #6415ff;
-    font-size: 16px;
-    letter-spacing: 1.5;
-    font-weight: 700;
-}
-
-.section__title {
-    font-size: 48px;
-    font-weight: 900;
-    margin: 16px 0;
-    letter-spacing: 0.0025em;
-}
-
-.section__para {
-    font-size: 18px;
-    font-weight: 500;
-    color:#666;
-    line-height: 1.5;
-}
-
-.btn {
-    background-color: #6415ff;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 12px 24px;
-    border-radius: 500px;
-    border: none;
-    margin: 8px;
-    transition: all 0.3s ease;
-}
 
 .btn:hover {
     background-color: #152cff;
@@ -533,3 +502,4 @@ VALUES
  }
 
 
+ 
