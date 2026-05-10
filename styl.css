@@ -686,7 +686,7 @@ Testimonials
 }
 
 .testimonial__ratings {
-   color: rgb(246, 173, 85);
+   color: rgb(246, 243, 85);
    margin-right: 2px;
    margin-top: 4px;
 } 
@@ -938,6 +938,23 @@ footer {
     cursor: pointer;  
 }
 
+.footer__column--link:hover {
+    text-decoration: underline;
+}
+
+.footer__divider {
+    width: 100%;
+    height: 2px;
+    margin: 64px 0;
+    color: rgb(44, 223, 255);
+}
+
+.footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .footer__logo {
     display: flex;
     align-items: center;
@@ -950,6 +967,36 @@ footer {
 
 .footer__logo--text {
     font-size: 20px;
-    color: white;
-
+    color: #edf2f7;
+    margin-left: 16px;
+    font-weight: 700;
 }
+
+.footer__copyright {
+    font-weight: 500;
+    color: #edf2f7;
+}
+
+.footer__socials {
+    display: flex;
+    align-items: center;
+    margin-left: -16px;
+}
+
+.footer__socials--link {
+    margin-left: 16px;
+    padding: 8px;
+    background: #f7fafc;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.footer__socials--link svg {
+    height: 16px;
+    width: 16px;
+}
+
