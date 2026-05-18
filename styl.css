@@ -547,11 +547,26 @@ VALUES
 }
 
 .plan {
-    width: calc(100% / 3);
+    position: relative;
+    margin-top: 4rem;
+    width: 100%;
     display: flex;
+    max-width: 24rem;
     flex-direction: column;
+    border-radius: 0.5rem;
 }
 
+
+.plan__middle,
+.plan__middle--enterprise {
+    border-top: 2px solid rgb(229,231,235);
+    border-bottom: 2px solid rgb(229, 231, 235);
+}
+
+.plan__middle--business {
+    border-top: 2px solid rgb(102, 126, 234);
+    border-bottom: 2px solid rgb(102, 126, 234); 
+}
 
 .plan__stripe { 
     position: absolute;
@@ -574,7 +589,8 @@ VALUES
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; 
 }
 
-.plan {
+.plan,
+.plan__enterprise {
     position: relative;
     margin-top: 4rem;
     display: flex;
@@ -599,29 +615,45 @@ VALUES
     line-height: 1.625;
 }
 
-.plan__title {
+.plan__title, 
+.plan__title--business,
+.plan__title--enterprise {
     font-size: 20px;
     font-weight: bold;
 }
 
-.plan__price {
+.plan__price,
+.plan__price--business,
+.plan__price--enterprise {
     font-size: 40px;
     font-weight: bold;
 }
 
-.plan__duration {
+.plan__duration,
+.plan__duration--business,
+.plan__duration--enterprise {
     font-size: 16px;
     letter-spacing: 0.1em;
     font-weight: bold;
     color: grey;
 }
 
-.plan__middle {
+.plan__middle,
+.plan__middle--business,
+.plan__middle--enterprise {
+    margin-left: -2rem;
+    margin-right: -2rem;
     display: flex;
+    flex: 110%;
     flex-direction: column;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    padding: 2rem;
 }
 
-.plan__target {
+.plan__target,
+.plan__target--business,
+.plan__target--enterprise {
     font-size: 20px;
     font-weight: 700;
     line-height: 1.5;
@@ -641,10 +673,10 @@ VALUES
     padding-right: 4rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
-
 }
 
-.plan__button {
+.plan__button,
+.plan__button--enterprise {
     margin-top: 24px;
     font-weight: 700;
     color: white;
@@ -658,13 +690,71 @@ VALUES
 }
 
 
-.plan:nth-child(2) {
+.plan__business {
+    position: relative;
+    margin-top: 4rem;
+    display: flex;
+    width: 100%;
+    max-width: 24rem;
+    flex-direction: column;
+    background-color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    text-align: center;
+    color: rgb(26,32,44);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 0.5rem;
     background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
 }
- .plan.plan:nth-child(2) .plan__button {
+
+.plan__button--business {
     color: #6415ff;
-    background-color: #f7fafc;
- }
+    background-color: white;
+    margin-top: 24px;
+    font-weight: 700;    
+    width: 100%;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    transition: 300ms;
+    border: none;
+}
+
+.plan__stripe--business {
+    visibility: hidden;
+}
+
+.plan__title--business,
+.plan__price--business, 
+.plan__duration--business,
+.plan__target--business,
+.plan__feature--business {
+    color: white;
+}
+
+.plan__feature--business {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+}  
+
+.plan__stripe--enterprise,
+.plan__button--enterprise {
+    color: #f7fafc;
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
+
+.plan__feature--enterprise {
+    margin-top: 20px;
+    font-weight: 500;
+    color: rgb(113, 128, 150);
+    font-size: 16px;
+    line-height: 1.5; 
+}
 
 .plans__blob {
     z-index: -10;
@@ -757,7 +847,7 @@ Testimonials
 
 .testimonial__buttons {
     display: flex;
-    text-align: center;
+    align-items: center;
 }
 
 .testimonial__button {
@@ -786,28 +876,6 @@ START
 
 */
 
-
-.start__blob--1 {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    height: 20rem;
-    width: 20rem;
-    transform: translate(-5rem, 8rem);
-    color: rgb(80 17 204);
-    opacity: 0.5;
-}
-
-.start__blob--2 {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    height: 20rem;
-    width: 20rem;
-    transform: translate(5rem, -16rem);
-    color: rgb(80 17 204);
-    opacity: 0.5;
-}
 
 .start__container {
     padding: 96px 0;
@@ -887,6 +955,33 @@ START
     transition: all 300ms ease;
 }
 
+#start .row {
+    position: relative;
+    overflow: hidden;
+}
+
+.start__blob--1 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 20rem;
+    width: 20rem;
+    transform: translate(-5rem, 8rem);
+    color: rgb(80 17 204);
+    opacity: 0.5;
+}
+
+.start__blob--2 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 20rem;
+    width: 20rem;
+    transform: translate(5rem, -16rem);
+    color: rgb(80 17 204);
+    opacity: 0.5;
+}
+
 
 /*
 
@@ -929,15 +1024,16 @@ footer {
 
 .footer__columns {
     margin-top: -48px;
-    display: flex;
+    display: flex;   
+    justify-content: space-between; 
+    flex-wrap: wrap;
 }
 
 .footer__column {
     margin-top: 48px;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: flex-start;   
     z-index: 2;
 }
 
@@ -968,7 +1064,7 @@ footer {
     width: 100%;
     height: 2px;
     margin: 64px 0;
-    color: rgb(44, 223, 255);
+    color: rgb(116,44,255);
 }
 
 .footer__bottom {
